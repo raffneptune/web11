@@ -340,12 +340,22 @@ body.light-theme {
   justify-self: center;
   width: 190px;
   height: 295px;
-  background: linear-gradient(150deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
+  background: linear-gradient(150deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), 
+              hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
   border-radius: 50%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+
+.home__handle img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  object-position: top center;
+  transform: translateY(-5%);
 }
 
 .home__buttons {
@@ -778,10 +788,19 @@ body.light-theme {
   .home__buttons {
     flex-direction: column;
   }
+
   .home__handle {
-    width: 150px;
-    height: 253px;
+    width: 130px;
+    height: 210px;
   }
+
+  .home__handle img {
+    width: 120%;         /* sedikit diperbesar agar foto isi penuh */
+    height: 120%;
+    object-position: top center;
+    transform: translateY(-8%); /* dorong ke atas biar kepala nempel */
+  }
+
   .home__img {
     width: 130px;
   }
@@ -930,10 +949,18 @@ body.light-theme {
   .nav {
     height: calc(var(--header-height)+1rem);
   }
+
   .home__handle {
-    width: 290px;
+    width: 400px;   /* disesuaikan dengan foto kamu (400x600) */
     height: 400px;
   }
+
+  .home__handle img {
+    width: 110%;
+    height: 110%;
+    transform: translateY(-5%);
+  }
+  
   .home__img {
     width: 220px;
   }
